@@ -1,0 +1,228 @@
+Name: DataStores
+Type: DataStoresCategoryFolder
+Children:
+- Name: InfluxDBDatabase1
+  Id: g=1f6466f31977c71b6fd335ec712e63f2
+  Type: InfluxDBStore
+  Children:
+  - Name: Tables
+    Type: BaseObjectType
+    Children:
+    - Name: data_logger_web
+      Type: InfluxDBStoreTable
+      Children:
+      - Name: Tags
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=5;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=5;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=5;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=5;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: LocalTimestamp
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: VariableToSample1
+          Type: StoreColumn
+          DataType: Int32
+  - Name: Token
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "hGN9S-7YL2q4yjo_GotzTBX7ZOm8ImZaqNYuyZHrQhUhm5ICZoe8M633EOcvmeVaAlrEb3bGm7x7QYcCF03faw=="
+  - Name: Organization
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "rockwell"
+  - Name: Bucket
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "test"
+  - Name: Server
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "10.224.106.108"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 8088
+  - Name: UseSSL
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: MaxColumnNameLength
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=5;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=59
+    Direction: Forward
+  - Name: ServerCertificate
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=10;%PROJECTDIR%/ISRG Root X1.crt"
+- Name: ODBCDatabase1
+  Id: g=de729ba0902a72c582b398b9f2ebdf3a
+  Type: ODBCStore
+  Children:
+  - Name: Tables
+    Type: BaseObjectType
+    Children:
+    - Name: levy_test3
+      Type: ODBCStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=5;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=5;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=5;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=5;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: LocalTimestamp
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: VariableToSample1
+          Type: StoreColumn
+          DataType: Int32
+  - Name: Type
+    Type: PropertyType
+    DataType: DBMSType
+    Value: 2
+  - Name: Username
+    Type: PropertyType
+    DataType: String
+    Value: "test"
+  - Name: Password
+    Type: PropertyType
+    DataType: Password
+    Value: "test"
+  - Name: MaxColumnNameLength
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=5;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=5;i=59
+    Direction: Forward
+  - Name: Server
+    Type: PropertyType
+    DataType: String
+    Value: "10.224.121.96"
+  - Name: Port
+    Type: PropertyType
+    DataType: UInt16
+    Value: 1433
+  - Name: Database
+    Type: PropertyType
+    DataType: String
+    Value: "master"
