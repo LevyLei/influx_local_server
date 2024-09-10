@@ -6,17 +6,17 @@ Project:
  Company: ''
  Copyright: ''
  FormatVersion: 1
- ProductVersion: 1.4
- CoreVersion: 3.0
+ ProductVersion: 1.5
+ CoreVersion: 4.0
  Dependencies:
   2:
    Uri: 'urn:FTOptix:UI'
    Module: FTOptix.UI
-   Version: 12.4
+   Version: 14.2
   3:
    Uri: 'urn:FTOptix:CoreBase'
    Module: FTOptix.CoreBase
-   Version: 3.1
+   Version: 4.0
   4:
    Uri: 'urn:FTOptix:DataLogger'
    Module: FTOptix.DataLogger
@@ -32,28 +32,32 @@ Project:
   7:
    Uri: 'urn:FTOptix:HMIProject'
    Module: FTOptix.HMIProject
-   Version: 6.0
+   Version: 6.4
   8:
    Uri: 'urn:FTOptix:NativeUI'
    Module: FTOptix.NativeUI
-   Version: 2.0
+   Version: 2.1
   9:
    Uri: 'urn:FTOptix:InfluxDBStore'
    Module: FTOptix.InfluxDBStore
-   Version: 1.0
+   Version: 3.0
   11:
    Uri: 'urn:FTOptix:ODBCStore'
    Module: FTOptix.ODBCStore
+   Version: 2.0
+  12:
+   Uri: 'urn:FTOptix:InfluxDBStoreRemote'
+   Module: FTOptix.InfluxDBStoreRemote
    Version: 1.0
  Statistics:
-  TotalNodeCount: 295
-  Objects: 98
+  TotalNodeCount: 308
+  Objects: 99
   ObjectTypes: 1
-  Variables: 196
+  Variables: 208
   VariableTypes: 0
   DataTypes: 0
   Methods: 0
-  References: 34
+  References: 37
   ReferenceTypes: 0
   Files: 20
  Nodes:

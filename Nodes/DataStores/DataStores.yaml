@@ -3,13 +3,13 @@ Type: DataStoresCategoryFolder
 Children:
 - Name: InfluxDBDatabase1
   Id: g=1f6466f31977c71b6fd335ec712e63f2
-  Type: InfluxDBStore
+  Type: InfluxDBStoreRemote
   Children:
   - Name: Tables
     Type: BaseObjectType
     Children:
     - Name: data_logger_web
-      Type: InfluxDBStoreTable
+      Type: RemoteInfluxDBStoreTable
       Children:
       - Name: Tags
         Type: BaseObjectType
@@ -48,11 +48,11 @@ Children:
   - Name: Bucket
     Type: BaseDataVariableType
     DataType: String
-    Value: "test"
+    Value: "jade"
   - Name: Server
     Type: BaseDataVariableType
     DataType: String
-    Value: "10.224.106.108"
+    Value: "10.224.110.202"
   - Name: Port
     Type: BaseDataVariableType
     DataType: UInt16
@@ -112,10 +112,21 @@ Children:
   - Class: Reference
     Target: ns=5;i=59
     Direction: Forward
-  - Name: ServerCertificate
+  - Name: SFEnabled
     Type: BaseDataVariableType
-    DataType: ResourceUri
-    Value: "ns=10;%PROJECTDIR%/ISRG Root X1.crt"
+    DataType: Boolean
+  - Name: SFBufferMaxSize
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1000
+  - Name: SFBufferUsage
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: SFBufferOverflow
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
 - Name: ODBCDatabase1
   Id: g=de729ba0902a72c582b398b9f2ebdf3a
   Type: ODBCStore
@@ -226,3 +237,18 @@ Children:
     Type: PropertyType
     DataType: String
     Value: "master"
+  - Name: SFEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: SFBufferMaxSize
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1000
+  - Name: SFBufferUsage
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: SFBufferOverflow
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
